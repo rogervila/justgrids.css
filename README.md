@@ -1,3 +1,5 @@
+![JustGrids.css](http://rogervila.github.io/justgrids.css/tests/demo.png)
+
 # JustGrids.css
 
 JustGrids is very simple, **lightweight and responsive css grid system**. these are some of its advantages:
