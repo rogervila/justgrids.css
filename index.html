@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>JustGrids.css | A simple responsive CSS grid system</title>
+
+		<!-- justgrids.css -->
+		<link rel="stylesheet" href="/dist/justgrids.css">
+
+
+		<!-- demo styles -->
+		<link rel="stylesheet" href="/tests/demo.css">
+
+		<style>
+
+			/* grids can have a container parent */
+			main{
+				padding: 0 50px;
+			}
+
+			/* create custom sizes */
+			.grid.my-size{
+				width: 20%;
+			}
+
+			/* custom mediaqueries for custom sizes */
+			@media(max-width:500px){
+				.grid.my-size{
+					width: 100%;
+				}
+			}
+
+		</style>
+
+	</head>
+	<body>
+
+		<main>
+
+			<h1>JustGrids.css</h1>
+
+			<ul>
+				<li><a href="#browser-support">Browser Support</a></li>
+				<li><a href="#column-sizes">Column Sizes</a></li>
+				<li><a href="#offset-sizes">Offset Sizes</a></li>
+				<li><a href="#simple-responsive">Simple Responsive</a></li>
+				<li><a href="#display-columns">Display/hide columns on responsive</a></li>
+				<li><a href="#remove-offset">Add/remove offset on responsive</a></li>
+				<li><a href="#subgrids">Subgrids</a></li>
+				<li><a href="#custom">Custom Sizes</a></li>
+				<li><a href="#best-practice">Best practice</a></li>
+				<li><a href="#interact">Interact with the grid</a></li>
+			</ul>
+
+			<a id="browser-support"></a>
+			<h2>Browser support</h2>
+			<p><a href="http://github.com/rogervila/justgrids.css">JustGrids.css</a> is <strong>supported by all CSS2 compatible browsers.</strong></p>
+
+			<p><strong>Responsive does not work in IE 8</strong>, because it does not support mediaqueries. </p>
+
+			<p><a href="https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support">Microsoft dropped support for IE8, IE9 and IE10</a>, so it is not planned to make it work in this browser.</p>
+
+			<p>Anyway, <strong>the grid system DOES work in old browsers</strong>.</p>
+
+
+
+
+			<a id="column-sizes"></a>
+			<h2>Column sizes (non responsive example)</h2>
+
+
+			<div class="grid row">
+				<div class="grid column size-1-12">
+					<p>size-1-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-2-12">
+					<p>size-2-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-3-12">
+					<p>size-3-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-4-12">
+					<p>size-4-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-5-12">
+					<p>size-5-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-6-12">
+					<p>size-6-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-7-12">
+					<p>size-7-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-8-12">
+					<p>size-8-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-9-12">
+					<p>size-9-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-10-12">
+					<p>size-10-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-11-12">
+					<p>size-11-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-12-12">
+					<p>size-12-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-1">
+					<p>size-1</p>
+				</div>
+			</div>
+
+			<p>size-0-12 and size-0 exist as well</p>
+
+
+			<a id="offset-sizes"></a>
+			<h2>Offset sizes (non responsive example)</h2>
+
+
+			<div class="grid row">
+				<div class="grid column size-1-12 offset-11-12">
+					<p>size-1-12 offset-11-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-2-12 offset-10-12">
+					<p>size-2-12 offset-10-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-3-12 offset-9-12">
+					<p>size-3-12 offset-9-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-4-12 offset-8-12">
+					<p>size-4-12 offset-8-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-5-12 offset-7-12">
+					<p>size-5-12 offset-7-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-6-12 offset-6-12">
+					<p>size-6-12 offset-6-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-7-12 offset-5-12">
+					<p>size-7-12 offset-5-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-8-12 offset-4-12">
+					<p>size-8-12 offset-4-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-9-12 offset-3-12">
+					<p>size-9-12 offset-3-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-10-12 offset-2-12">
+					<p>size-10-12 offset-2-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-11-12 offset-1-12">
+					<p>size-11-12 offset-1-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-12-12 offset-0-12">
+					<p>size-12-12 offset-0-12</p>
+				</div>
+			</div>
+
+			<div class="grid row">
+				<div class="grid column size-12-12 offset-0-12">
+					<p>size-1 offset-0</p>
+				</div>
+			</div>
+
+			<a id="simple-responsive"></a>
+			<h2>Simple responsive</h2>
+
+			<div class="grid row">
+
+				<div class="grid column size-3-12 md-size-6-12 sm-size-1">
+					<p>size-3-12 md-size-6-12 sm-size-1</p>
+				</div>
+
+				<div class="grid column size-3-12 md-size-6-12 sm-size-1">
+					<p>size-3-12 md-size-6-12 sm-size-1</p>
+				</div>
+
+				<div class="grid column size-3-12 md-size-6-12 sm-size-1">
+					<p>size-3-12 md-size-6-12 sm-size-1</p>
+				</div>
+
+				<div class="grid column size-3-12 md-size-6-12 sm-size-1">
+					<p>size-3-12 md-size-6-12 sm-size-1</p>
+				</div>
+			</div>
+
+			<a id="display-columns"></a>
+			<h2>Display or hide columns on responsive</h2>
+
+			<div class="grid row">
+
+				<div class="grid column size-4-12 md-size-0 sm-size-1">
+					<p> <strong>1</strong> <small>size-4-12 md-size-0 sm-size-1</small></p>
+				</div>
+
+				<div class="grid column size-4-12 md-size-6-12 sm-size-1">
+					<p> <strong>2</strong> <small>size-4-12 md-size-6-12 sm-size-1</small></p>
+				</div>
+
+				<div class="grid column size-4-12 md-size-6-12 sm-size-0">
+					<p> <strong>3</strong> <small>size-4-12 md-size-6-12 sm-size-0</small></p>
+				</div>
+
+			</div>
+
+			<a id="remove-offset"></a>
+			<h2>Add/remove offset on responsive</h2>
+
+			<div class="grid row">
+
+				<div class="grid column size-7-12 offset-5-12 sm-size-1 sm-offset-0">
+					<p>size-7-12 offset-5-12 sm-size-1 sm-offset-0</p>
+				</div>
+
+			</div>
+
+			<a id="subgrids"></a>
+			<h2>Subgrids</h2>
+
+			<div class="grid row">
+
+				<div class="grid column size-6-12">
+
+					<h3>row inside a 6-12 column</h3>
+
+					<div class="grid row">
+
+						<div class="grid column size-6-12">
+							<p>size-6-12</p>
+						</div>
+
+						<div class="grid column size-6-12">
+							<p>size-6-12</p>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<a id="custom"></a>
+			<h2>Custom sizes. In this example, 5 based columns</h2>
+
+			<div class="grid row">
+
+				<div class="grid column my-size">
+					<p>my-size = 20%</p>
+				</div>
+
+				<div class="grid column my-size">
+					<p>my-size = 20%</p>
+				</div>
+
+				<div class="grid column my-size">
+					<p>my-size = 20%</p>
+				</div>
+
+				<div class="grid column my-size">
+					<p>my-size = 20%</p>
+				</div>
+
+				<div class="grid column my-size">
+					<p>my-size = 20%</p>
+				</div>
+
+			</div>
+
+
+			<a id="best-practice"></a>
+			<h2>Best practice: add a div inside the column in order to apply styles</h2>
+
+			<div class="grid row">
+
+				<div class="grid column size-4-12 md-size-1 sm-size-1">
+					<div class="demo">
+						<h3>Lorem Ipsum</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, sed? Modi doloribus, impedit perferendis necessitatibus quae quo voluptates suscipit, eum vero, iste repellendus tempore qui. Officiis illum dolorem et nemo!</p>
+					</div>
+				</div>
+
+				<div class="grid column size-4-12 md-size-1 sm-size-1">
+					<div class="demo">
+						<h3>Lorem Ipsum</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quibusdam qui velit dicta ipsum nobis sunt sequi quo atque deleniti, a est! Facere pariatur temporibus, delectus nisi, hic dolore omnis!</p>
+					</div>
+				</div>
+
+				<div class="grid column size-4-12 md-size-1 sm-size-1">
+					<div class="demo">
+						<h3>Lorem Ipsum</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ea temporibus, pariatur impedit facilis aliquam veniam, dolorem. Tempore rem quas, tempora, cupiditate doloribus voluptatem, eos cumque natus voluptas soluta non.</p>
+					</div>
+				</div>
+
+			</div>
+
+
+			
+			<a id="interact"></a>
+			<h2>Interact with the grid</h2>
+
+			<div class="grid row">
+
+				<div class="grid column size-2-12 md-size-4-12 sm-size-1" style="text-align:right; background:#fff">
+					<span style="margin-right:10px;">column sizes</span>
+				</div>
+				<div class="grid column size-10-12 md-size-8-12 sm-size-1" style="background:#fff">
+					<button v-on:click="columns = 1">1</button>
+					<button v-on:click="columns = 2">2</button>
+					<button v-on:click="columns = 4">4</button>
+					<button v-on:click="columns = 6">6</button>
+					<button v-on:click="columns = 12">12</button>
+				</div>
+
+			</div>
+
+			<br>
+
+			<div class="grid row">
+
+				<div class="grid column size-2-12 md-size-4-12 sm-size-1" style="text-align:right;background:#fff">
+					<label for="columns" style="margin-right:10px;">number of rows</label>
+				</div>
+				<div class="grid column size-10-12 md-size-8-12 sm-size-1" style="background:#fff">
+					<input type="number" id="columns" v-model="rows" min="1">
+				</div>
+
+			</div>
+		</main>
+
+		<br><br>
+
+
+		<div v-for="n in parseInt(rows)" class="grid row">
+
+			<div v-for="n in columnLength" class="grid column size-{{columns}}-12">
+				<p>size-{{columns}}-12</p>
+			</div>
+
+		</div>
+
+		<br><br><br><br>
+
+		<p>&copy; <a href="https://www.linkedin.com/in/rogervilacamon">Roger Vilà</a> <time datetime="2016">2016</time></p>
+		
+		
+		<script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.min.js"></script>
+
+		<script>
+
+
+			var vm = new Vue({
+				el: 'body',
+				data: {
+					rows: 1,
+					columns: 12
+				},
+				computed: {
+					columnLength: function(){
+						return 12 / this.columns;
+					}
+				}
+			});
+
+		</script>
+
+	</body>
+</html>
