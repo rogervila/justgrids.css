@@ -8,7 +8,7 @@ JustGrids is very simple, **lightweight and responsive css grid system**. these 
 
 ## Demo
 
-[Visit de demo]() to test JusGrids.css
+[Visit de demo]() to test JustGrids.css
 
 ## Browser support
 
