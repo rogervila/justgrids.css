@@ -12,6 +12,12 @@ JustGrids is very simple, **lightweight and responsive css grid system**. these 
 
 [Visit de demo](http://rogervila.github.io/justgrids.css/) to test JustGrids.css
 
+## Install
+
+```shell
+$ bower install justgrids --save
+```
+
 ## Browser support
 
 JustGrids.css is **supported by all CSS2 compatible browsers**.
