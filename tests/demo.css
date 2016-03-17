@@ -1,0 +1,49 @@
+/* demo style */
+
+/* normalize */
+
+@import url('//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css');
+
+
+
+/* demo */
+
+h1, p{
+	padding: 0 5px;
+}
+
+h2{
+	padding: 1.4em 5px;
+}
+
+.grid.column{
+	background: #e8e8e8;
+	color: #2e2e2e;
+}
+
+.grid.column p{
+	padding: 0 5px;
+	font-size: 10pt;
+}
+
+.demo{
+	min-height: 250px;
+	max-height: 250px;
+	padding: 50px;
+	background: #d1cece;
+}
+
+.demo p{
+	padding: 0!important;
+	font-size: 12pt!important;
+}
+
+@media(max-width:500px){
+	.column p{
+		font-size: 9pt!important;
+	}
+}
+
+.text{
+	margin: 1em 5px;
+}

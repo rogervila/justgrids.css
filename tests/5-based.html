@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>JustGrids.css | A simple responsive CSS grid system</title>
+
+		<!-- justgrids.css -->
+		<link rel="stylesheet" href="../dist/justgrids.css">
+
+
+		<!-- demo styles -->
+		<link rel="stylesheet" href="demo.css">
+
+		<style>
+
+			.grid.column > div{
+				border: solid black 1px;
+			}
+			
+			/* create custom sizes */
+			.grid.my-size{
+				width: 20%;
+			}
+			
+			/* custom mediaqueries for custom sizes */
+			@media(max-width:500px){
+				.grid.my-size{
+					width: 100%;
+				}
+			}
+
+		</style>
+
+	</head>
+	<body>
+	
+	<h2>Custom sizes. In this example, 5 based columns</h2>
+	
+	<div class="grid row">
+		
+		<div class="grid column my-size">
+			<p>my-size = 20%</p>
+		</div>
+		
+		<div class="grid column my-size">
+			<p>my-size = 20%</p>
+		</div>
+		
+		<div class="grid column my-size">
+			<p>my-size = 20%</p>
+		</div>
+		
+		<div class="grid column my-size">
+			<p>my-size = 20%</p>
+		</div>
+		
+		<div class="grid column my-size">
+			<p>my-size = 20%</p>
+		</div>
+		
+	</div>
+	
+	
+	</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "justgrids",
+  "authors": [
+    "Roger Vilà <rogervila@me.com>"
+  ],
+  "description": "A simple responsive CSS grid system",
+  "main": "dist/justgrids.min.css",
+  "keywords": [
+    "css",
+    "grids",
+    "dependency",
+    "free"
+  ],
+  "license": "MIT",
+  "homepage": "http://rogervila.es/justgrids",
+  "ignore": [
+    "tests",
+    ".gitignore"
+  ]
+}
